@@ -1,10 +1,5 @@
-
 package Aggregator;
 
-/**
- *
- * @author dierbach
- */
 public class Orders {
     private OrderItem[] order_items;
     private int current;
@@ -14,11 +9,12 @@ public class Orders {
         initOrders();
     }
 
-    public Orders(Orders otherOrder) {
-        System.arraycopy(otherOrder.order_items, 0, order_items, 0, order_items.length);
-    }
+//    public Orders(Orders otherOrder) {
+//        System.arraycopy(otherOrder.order_items, 0, order_items, 0, order_items.length);
+//    }
 
     public void addOrder(OrderItem order) {
+        System.out.print("aids");
         order_items[findAvailIndex()] = order;
     }
 

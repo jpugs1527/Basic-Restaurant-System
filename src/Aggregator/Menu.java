@@ -1,10 +1,5 @@
-
 package Aggregator;
 
-/**
- *
- * @author dierbach
- */
 public class Menu {
     private MenuItem[] menu_items;
     private int current;
@@ -14,9 +9,9 @@ public class Menu {
         initMenu();
     }
 
-    public Menu(Menu otherMenu) { // copy constructor
-        System.arraycopy(otherMenu.menu_items, 0, menu_items, 0, menu_items.length);
-    }
+//    public Menu(Menu otherMenu) { // copy constructor
+//        System.arraycopy(otherMenu.menu_items, 0, menu_items, 0, menu_items.length);
+//    }
 
     public void addItem(MenuItem item) {
         menu_items[findAvailIndex()] = item;

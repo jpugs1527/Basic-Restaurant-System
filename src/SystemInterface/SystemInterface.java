@@ -1,14 +1,9 @@
-
 package SystemInterface;
 
 import Aggregator.*;
 import Commands.Invoker;
 import java.util.ArrayList;
 
-/**
- *
- * @author dierbach
- */
 public class SystemInterface {
     private Invoker inv;
     
@@ -18,7 +13,7 @@ public class SystemInterface {
     
     public String[] getMenu() {
         Menu menu = Invoker.getMenu();
-
+        String[] menuArr = new String[2];
         ArrayList<String> displayLines = new ArrayList<>();
 
         menu.reset();
@@ -27,19 +22,21 @@ public class SystemInterface {
         }
 
         // convert ArrayList<String> to array of Strings
-        return (String[]) displayLines.toArray();
+        menuArr = displayLines.toArray(menuArr);
+        return menuArr;
     }
 
     public String[] submitOrders() {
         Orders order = Invoker.submitOrder();
-
+        String[] orderArr = new String[2];
         ArrayList<String> displayOrder = new ArrayList<>();
 
         order.reset();
         while (order.hasNext()) {
             displayOrder.add(order.getNextOrder().toString());
         }
-
-        return (String[]) displayOrder.toArray();
+        
+        orderArr = displayOrder.toArray(orderArr);
+        return orderArr;
     }
 }

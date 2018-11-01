@@ -1,10 +1,5 @@
-
 package Aggregator;
 
-/**
- *
- * @author dierbach
- */
 public class Aggregator {
 
     private Menu menu;

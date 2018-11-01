@@ -1,12 +1,7 @@
-
 package Commands;
 
 import Aggregator.*;
 
-/**
- *
- * @author dierbach
- */
 public class Invoker {
     private static Aggregator agg;
     

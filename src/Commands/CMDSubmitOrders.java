@@ -16,9 +16,9 @@ public class CMDSubmitOrders {
     }
     
     public Object execute(){
-    return new Orders(agg.submitOrders()); // if copy constructor implemented
+//    return new Orders(agg.submitOrders()); // if copy constructor implemented
     // or
-    // return agg.getMenu().clone(); // if clone method implemented 
+     return agg.submitOrders(); // if clone method implemented 
     }
     
 }
