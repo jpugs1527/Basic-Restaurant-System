@@ -14,7 +14,6 @@ public class Orders {
 //    }
 
     public void addOrder(OrderItem order) {
-        System.out.print("aids");
         order_items[findAvailIndex()] = order;
     }
 
